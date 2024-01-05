@@ -5,4 +5,5 @@
 - The group operation * is defined through:
 
 +*+ = -*- = +
+
 +*- = -*+ = -
