@@ -1,0 +1,3 @@
+/home/david/myProjects/pt1-exam-preparation/Z2_Group/build/CMakeFiles/Z2.exe.dir
+/home/david/myProjects/pt1-exam-preparation/Z2_Group/build/CMakeFiles/edit_cache.dir
+/home/david/myProjects/pt1-exam-preparation/Z2_Group/build/CMakeFiles/rebuild_cache.dir
