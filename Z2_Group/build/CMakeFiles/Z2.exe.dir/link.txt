@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/Z2.exe.dir/z2_group.cpp.o -o ../Z2.exe 
