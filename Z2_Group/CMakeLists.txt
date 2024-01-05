@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project("Z2 Group")
+project("Z2 Group" VERSION 1.0)
 
 set(CXX_STANDARD_REQUIRED ON)
 set(CXX_STANDARD 20)
