@@ -1,0 +1,10 @@
+Penna Simulation VERSION 1.0 
+                     Parameter     Value
+                Random Seed =         42
+              Mutation Rate =          1
+      Threshhold Parameter  =          1
+     Reproduction Parameter =         12
+        Pregnancy Parameter =       0.18
+              Starting Size =       3000
+               Maximal Size =      30000
+             Survived Years =        501
