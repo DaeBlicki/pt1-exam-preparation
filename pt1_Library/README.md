@@ -35,7 +35,7 @@ unsigned int random2 = pt1::Random_Number_Generator::generate() % 100;
 ```
 
 ## Timer
-Timer class to measure the code speed.
+Timer class to measure the code speed. The guaranteed precision is 20 microseconds!
 
 ```
 pt1::Timer t;
