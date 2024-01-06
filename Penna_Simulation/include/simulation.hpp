@@ -9,10 +9,8 @@
 #define SIMULATION_H
 
 #include "population.hpp"
-#include "animal.hpp"
-#include "../pt1/Random.hpp"
-
-namespace Penna{
+#include "Penna/animal.hpp"
+#include "pt1/Random.hpp"
 
 class Simulation
 {
@@ -60,7 +58,5 @@ public:
     void saveResult();
 
 };
-
-} // end namespace Penna
 
 #endif /* STIMULATION_H     */

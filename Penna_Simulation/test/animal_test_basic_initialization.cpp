@@ -1,10 +1,18 @@
+/* ===================================================================
+ * Programming Techniques for Scientific Simulations I  
+ * package  :   penna
+ * function :   test the basic animal initialization
+ * created  :   05/01/2024
+ * author   :   DaeBlicki
+ * 
+ * updated  :   xx/xx/xx
+ * VERSION 1.00 (C) Copyright Free to use
+ * ===================================================================*/
+
 #include "../include/Penna/animal.hpp"
 #include "../include/pt1/Random.hpp"
 #include <stdexcept>
 
-/* 
- * TEST_ANIMAL_BASIC_INIITIALIZATION() - Test Animal::init()
- */
 void TEST_ANIMAL_BASIC_INITIALIZATION()
 {
     const age_t maximalAge = Penna::Animal::maximalAge();

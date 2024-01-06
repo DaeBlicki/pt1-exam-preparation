@@ -1,3 +1,13 @@
+#======================================================#
+# CMakeLists.txt for the pt1 library                   
+# created   :   18/12/2023
+# author    :   DaeBlicki
+# 
+# updated   :   06/01/2024
+# message   :   Add Complex class
+# VERSION 2.00 (C) Copyright Free to use
+#======================================================#
+
 cmake_minimum_required(VERSION 3.12)
 
 project("pt1 Library" VERSION 1.1)

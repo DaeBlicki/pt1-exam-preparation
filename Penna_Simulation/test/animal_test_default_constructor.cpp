@@ -1,11 +1,16 @@
+/* ===================================================================
+ * Programming Techniques for Scientific Simulations I  
+ * package  :   penna
+ * function :   test if constructed animal is random
+ * created  :   05/01/2024
+ * author   :   DaeBlicki
+ * 
+ * updated  :   xx/xx/xx
+ * VERSION 1.00 (C) Copyright Free to use
+ * ===================================================================*/
+
 #include "../include/Penna/animal.hpp"
 #include <stdexcept>
-
-/*
- * TEST_ANIMAL_DEFAULT_CONSTRUCTOR - Test the Default Constructor for Animal
- * Every constructed Animal should be random and not the same!
- * start with age = 0, unpregnant, alive
- */
 
 void TEST_ANIMAL_DEFAULT_CONSTRUCTOR()
 {

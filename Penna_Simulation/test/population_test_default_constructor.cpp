@@ -1,10 +1,16 @@
+/* ===================================================================
+ * Programming Techniques for Scientific Simulations I  
+ * package  :   penna
+ * function :   test if population is initialized
+ * created  :   05/01/2024
+ * author   :   DaeBlicki
+ * 
+ * updated  :   xx/xx/xx
+ * VERSION 1.00 (C) Copyright Free to use
+ * ===================================================================*/
+
 #include "../include/Penna/population.hpp"
 #include <stdexcept>
-
-/*
- * TEST_ANIMAL_POPULATION_CONSTRUCTOR - Test the Default Constructor for Animal
- * Uninitialized population has size_ == 0 and max_size_ == 0 
- */
 
 void TEST_POPULATION_DEFAULT_CONSTRUCTOR()
 {

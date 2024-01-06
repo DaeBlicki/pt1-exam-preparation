@@ -1,13 +1,20 @@
+/* ===================================================================
+ * Programming Techniques for Scientific Simulations I  
+ * package  :   penna
+ * function :   test the advanced animal initialization
+ * created  :   05/01/2024
+ * author   :   DaeBlicki
+ * 
+ * updated  :   xx/xx/xx
+ * VERSION 1.00 (C) Copyright Free to use
+ * ===================================================================*/
+
 #include "../include/Penna/animal.hpp"
 #include "../include/pt1/Random.hpp"
 #include <stdexcept>
 #include <error.h>
 #include <iostream>
 
-/* 
- * TEST_ANIMAL_ADVANCED_INIITIALIZATION() - Test the daily life of an animal
- * Animal::reproduction(), Animal::growth(), Animal::giveBirth() and Animal::survive()
- */
 void TEST_ANIMAL_ADVANCED_INITIALIZATION()
 {
     /* Create mother and the new born child */

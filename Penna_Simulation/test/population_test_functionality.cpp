@@ -1,10 +1,17 @@
+/* ===================================================================
+ * Programming Techniques for Scientific Simulations I  
+ * package  :   penna
+ * function :   test the member functions of population class
+ * created  :   05/01/2024
+ * author   :   DaeBlicki
+ * 
+ * updated  :   xx/xx/xx
+ * VERSION 1.00 (C) Copyright Free to use
+ * ===================================================================*/
+
 #include "../include/Penna/population.hpp"
 #include <stdexcept>
 
-/* 
- * TEST_POPULATION_FUNCTIONALITY() - Test the member functions of population class
- * Parent and Child genome should be identical
- */
 void TEST_POPULATION_FUNCTIONALITY()
 {
     pt1::Random_Number_Generator::seed(42);

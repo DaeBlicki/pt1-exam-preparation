@@ -11,12 +11,12 @@
 
 #include <iostream>
 #include <fstream>
-#include "../include/Penna/simulation.hpp"
+#include "../include/simulation.hpp"
 
 int main()
 {
     std::cout << "WELCOME TO THE PENNA SIMULATION! \n";
-    Penna::Simulation mySimulation = Penna::Simulation();
+    Simulation mySimulation = Simulation();
     mySimulation.init();
     mySimulation.simulate_with_visuals();
     mySimulation.saveResult();

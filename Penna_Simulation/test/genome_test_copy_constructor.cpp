@@ -1,10 +1,17 @@
+/* ===================================================================
+ * Programming Techniques for Scientific Simulations I  
+ * package  :   penna
+ * function :   test if copied genome is identical
+ * created  :   05/01/2024
+ * author   :   DaeBlicki
+ * 
+ * updated  :   xx/xx/xx
+ * VERSION 1.00 (C) Copyright Free to use
+ * ===================================================================*/
+
 #include "../include/Penna/genome.hpp"
 #include <stdexcept>
 
-/* 
- * TEST_GENOME_COPY_CONSTRUCTOR() - Test the copy constructor of genome
- * Parent and Child genome should be identical
- */
 void TEST_GENOME_COPY_CONSTRUCTOR()
 {
     Penna::Genome parent_genome = Penna::Genome();

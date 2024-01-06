@@ -1,11 +1,18 @@
+/* ===================================================================
+ * Programming Techniques for Scientific Simulations I  
+ * package  :   penna
+ * function :   test if copied animal is identical
+ * created  :   05/01/2024
+ * author   :   DaeBlicki
+ * 
+ * updated  :   xx/xx/xx
+ * VERSION 1.00 (C) Copyright Free to use
+ * ===================================================================*/
+
 #include "../include/Penna/animal.hpp"
 #include "../include/pt1/Random.hpp"
 #include <stdexcept>
 
-/* 
- * TEST_ANIMAL_COPY_CONSTRUCTOR() - Test the copy constructor of genome
- * Parent and Child genome should be identical
- */
 void TEST_ANIMAL_COPY_CONSTRUCTOR()
 {
     Penna::Animal parent_animal = Penna::Animal();
