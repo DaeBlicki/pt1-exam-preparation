@@ -100,6 +100,9 @@ Complex& operator/=(Complex& a, const Complex& b)
 {
     const double x1 = a.getReal(); const double y1 = a.getImaginary();
     const double x2 = b.getReal(); const double y2 = b.getImaginary();
+    if(x2 == 0 && y2 == 0){
+        throw std::runtime_error("Cannot divide by zero! \n");
+    }
     const double x = (x1*x2 + y1*y2)/(x2*x2 + y2*y2);
     const double y = (y1*x2 - x1*y2)/(x2*x2 + y2*y2);
     a.setReal(x);

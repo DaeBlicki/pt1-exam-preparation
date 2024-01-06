@@ -10,6 +10,7 @@
  * ===================================================================*/
 
 #include "../include/Complex.hpp"
+#include <iostream>
 
 void TEST_COMPLEX_ARITHMETIC()
 {
@@ -34,14 +35,16 @@ void TEST_COMPLEX_ARITHMETIC()
         throw std::logic_error("TEST COMPLEX ARITHMETIC FAILED! divied by zero! \n");
     } catch(std::runtime_error& err){}
     c = a/b;
-    if(c.getReal() != 1.0 || c.getImaginary() != 1.0){
+    if(c.getReal() != 1.0 || c.getImaginary() != 0.0){
         throw std::logic_error("TEST COMPLEX ARITHMETIC FAILED! operator/ \n");
     }
     d = a*c;
-    if(c.getReal() != x || c.getImaginary() != y){
+    if(d.getReal() != x || d.getImaginary() != y){
         throw std::logic_error("TEST COMPLEX ARITHMETIC FAILED! operator* \n");
     }
     /* testing commutativity of addition and multiplication */
+    a = pt1::Complex(x, y);
+    b = pt1::Complex(y, x);
     c = a+b;
     d = b+a;
     if(c != d){

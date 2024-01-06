@@ -14,5 +14,5 @@ Lecturer: Roger Kaeppeli
  - Complex class: used for complex analysis
 - Inheritance sequence: Change polymorphism
 - Container: Use standard library
-- Wave Equation: Pythona and NumPy
+- Wave Equation: Python and NumPy
 - EXTRA: Penna Simulation
