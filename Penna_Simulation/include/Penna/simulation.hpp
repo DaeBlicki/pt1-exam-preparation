@@ -1,3 +1,10 @@
+/* ==============================================================
+ * Programming Techniques for Scientific Simulations I  
+ * Header file defining simulation class for penna
+ * 
+ * VERSION 1.00 (C) Copyright Free to use
+ * ==============================================================*/
+
 #ifndef SIMULATION_H
 #define SIMULATION_H
 
@@ -55,6 +62,5 @@ public:
 };
 
 } // end namespace Penna
-
 
 #endif /* STIMULATION_H     */

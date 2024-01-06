@@ -1,3 +1,14 @@
+/* ===================================================================
+ * Programming Techniques for Scientific Simulations I  
+ * package  :   Penna
+ * function :   simulate the population dynamics
+ * created  :   18/12/2023
+ * author   :   DaeBlicki
+ * 
+ * updated  :   xx/xx/xx
+ * VERSION 1.00 (C) Copyright Free to use
+ * ===================================================================*/
+
 #include "../../include/Penna/simulation.hpp"
 #include <iostream>
 #include <fstream>

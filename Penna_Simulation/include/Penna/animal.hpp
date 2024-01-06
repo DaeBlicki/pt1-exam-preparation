@@ -1,3 +1,10 @@
+/* ==============================================================
+ * Programming Techniques for Scientific Simulations I  
+ * Header file defining animal for penna simulation
+ * 
+ * VERSION 1.00 (C) Copyright Free to use
+ * ==============================================================*/
+
 #ifndef ANIMAL_H
 #define ANIMAL_H
 

@@ -1,3 +1,14 @@
+/* ===================================================================
+ * Programming Techniques for Scientific Simulations I  
+ * package  :   Penna
+ * function :   represent the population of animals
+ * created  :   18/12/2023
+ * author   :   DaeBlicki
+ * 
+ * updated  :   xx/xx/xx
+ * VERSION 1.00 (C) Copyright Free to use
+ * ===================================================================*/
+
 #include "../../include/Penna/population.hpp"
 #include <stdexcept>
 

@@ -8,8 +8,10 @@ Lecturer: Roger Kaeppeli
 
 ## Content
 - Z2 Group: Operator overloading and function templates
-- Complex Numbers Class: Class implementation
-- Timer and Random Library: Create static library
+- pt1 Library: Create static library and class implementation
+ - Timer class: used to time the code
+ - Random class: static random number generator
+ - Complex class: used for complex analysis
 - Inheritance sequence: Change polymorphism
 - Container: Use standard library
 - Wave Equation: Pythona and NumPy

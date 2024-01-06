@@ -1,3 +1,10 @@
+/* ==============================================================
+ * Programming Techniques for Scientific Simulations I  
+ * Header file defining genome for penna simulation
+ * 
+ * VERSION 1.00 (C) Copyright Free to use
+ * ==============================================================*/
+
 #ifndef GENOME_H
 #define GENOME_H
 
@@ -5,15 +12,12 @@
 #include <limits>
 #include "../pt1/Random.hpp"
 
-
+// namespace Penna
 namespace Penna
 {
     using parameter_t = unsigned int;
     using age_t = unsigned int;
 
-/* 
- * Header for Penna Genome class
- */
 class Genome
 {
 private:

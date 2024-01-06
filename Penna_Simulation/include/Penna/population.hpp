@@ -1,3 +1,10 @@
+/* ==============================================================
+ * Programming Techniques for Scientific Simulations I  
+ * Header file defining population for penna simulation
+ * 
+ * VERSION 1.00 (C) Copyright Free to use
+ * ==============================================================*/
+
 #ifndef POPULATION_H
 #define POPULATION_H
 
@@ -5,11 +12,9 @@
 #include <list>
 #include <unordered_set>
 
+// namespace Penna
 namespace Penna{
 
-/*
- * Header for Penna population class
- */
 class Population{    
 
 protected:
