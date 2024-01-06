@@ -9,14 +9,12 @@
  * VERSION 1.00 (C) Copyright Free to use
  * ===================================================================*/
 
-#include "../../include/Penna/simulation.hpp"
+#include "../include/simulation.hpp"
 #include <iostream>
 #include <fstream>
 #include <error.h>
 #include <iomanip>
 #include <matplot/matplot.h>
-
-namespace Penna{
 
 Simulation::Simulation()
 {
@@ -265,9 +263,3 @@ void Simulation::saveResult()
         std::cerr << "ERROR: Result File could not be opened! \n";
     }
 }
-
-
-
-
-
-} // end namespace Penna

@@ -54,28 +54,27 @@ set(tests
 # create test case for penna library
 foreach(test ${tests})
     add_executable(${test} test/${test}.cpp ${PENNA_SOURCES})
-    target_link_libraries(${test} pt1)
-    target_include_directories(${test} PUBLIC include/Penna)
-    target_include_directories(${test} PUBLIC include/pt1)
+    target_link_libraries(${test} ${CMAKE_CURRENT_SOURCE_DIR}/lib/libpt1.a)
+    target_include_directories(${test} PRIVATE include/Penna)
+    target_include_directories(${test} PRIVATE include/pt1)
     add_test(NAME ${test} COMMAND ${test})
 endforeach()
 
 # Build the executable
-# add_executable(Penna_Simulation src/main.cpp src/simulation.cpp)
+add_executable(Penna_Simulation src/main.cpp src/simulation.cpp ${PENNA_SOURCES})
 
 # Include the used headers in the library
-# target_include_directories(Penna_Simulation PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/Penna)
-# target_include_directories(Penna_Simulation PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/pt1)
+target_include_directories(Penna_Simulation PRIVATE include/Penna)
+target_include_directories(Penna_Simulation PRIVATE include/pt1)
 
 # Link libraries with executable
-# target_link_libraries(Penna_Simulation pt1)
-# target_link_libraries(Penna_Simulation PUBLIC matplot)
-# target_link_libraries(Penna_Simulation Penna_library)
+target_link_libraries(Penna_Simulation ${CMAKE_CURRENT_SOURCE_DIR}/lib/libpt1.a)
+target_link_libraries(Penna_Simulation matplot)
 
 # Ensure that the 'results' subdirectory is created during the build process
-# file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/doc/Simulation_results)
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/doc/Simulation_results)
 
 # Store the executable in the bin directory
-# set_target_properties(Penna_Simulation PROPERTIES
-#     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin
-# )
+set_target_properties(Penna_Simulation PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin
+)
