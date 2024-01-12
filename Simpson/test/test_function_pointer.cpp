@@ -8,3 +8,16 @@
  * updated  :   xx/xx/xx
  * VERSION 1.00 (C) Copyright Free to use
  * ===================================================================*/
+
+#include "../include/simpson.hpp"
+
+void TEST_FUNCTION_POINTER()
+{
+
+}
+
+int main()
+{
+    TEST_FUNCTION_POINTER();
+    return 0;
+}

@@ -10,16 +10,14 @@
  * ===================================================================*/
 
 #include "../include/simpson.hpp"
-#include <vectors.h>
 
-void TEST_SINE()
+void TEST_FUNCTION_CLASS()
 {
-    constexpr double tol = 1e-9;
 
-}
+}   
 
 int main()
 {
-    TEST_SINE();
+    TEST_FUNCTION_CLASS();
     return 0;
 }

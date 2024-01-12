@@ -42,8 +42,20 @@ void check_precondition(const double a, const double b, const unsigned int N)
  */
 double integrate_sine(const double a, const double b, const unsigned int N)
 {
-    check_precondition();
-    return 0.0;
+    Simpson::check_precondition(a, b, N);
+    const double dx = (b-a)/N;
+    const double pre = dx/6;
+    double sum = 0.0;
+    for(unsigned int i = 0; i < N-1; i++){
+        double pre_sum = 0.0;
+        const double x_i = dx*i + a;
+        pre_sum += std::sin(x_i);
+        pre_sum += 4*std::sin(0.5*(2*x_i + dx));
+        pre_sum += std::sin(x_i + dx);
+        pre_sum *= pre;
+        sum += pre_sum;
+    }
+    return sum;
 }
 
 /*
@@ -57,7 +69,7 @@ double integrate_sine(const double a, const double b, const unsigned int N)
  */
 double integrate( double (*f)(const double), const double a, const double b, const unsigned int N)
 {
-    check_precondition();
+    Simpson::check_precondition(a, b, N);
     return 0.0;
 }
 
@@ -73,7 +85,7 @@ double integrate( double (*f)(const double), const double a, const double b, con
 template <typename Function>
 double integrate(Function &&f, const double a, const double b, const unsigned int N)
 {
-    check_precondition();
+    Simpson::check_precondition(a, b, N);
     return 0.0;
 }
 
@@ -86,9 +98,9 @@ double integrate(Function &&f, const double a, const double b, const unsigned in
  * @ N : numbers of bins to split interval into smaller intervals (N > 0)
  * POST: return integration of the function object in intervall (a, b) with N bins
  */
-double integrate( const Simpson::Function&, const double, const double, const unsigned int )
+double integrate(const Simpson::Function& f, const double a, const double b, const unsigned int N)
 {
-    check_precondition();
+    Simpson::check_precondition(a, b, N);
     return 0.0;
 }
 
