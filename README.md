@@ -12,6 +12,11 @@ Lecturer: Roger Kaeppeli
  - Timer class: used to time the code
  - Random class: static random number generator
  - Complex class: used for complex analysis
+- Simpson Integration Library: Use to integrate functions
+ - Sine integration     : exercise 1
+ - Function Pointer     : exercise 2
+ - Function Template    : exercise 4/5
+ - Virtual Function     : exercise 8
 - Inheritance sequence: Change polymorphism
 - Container: Use standard library
 - Wave Equation: Python and NumPy
