@@ -9,6 +9,7 @@
 #define SIMPSON_H
 
 #include <stdexcept>
+#include <cmath>
 
 // namespace Simpson
 namespace Simpson{

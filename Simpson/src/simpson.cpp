@@ -27,7 +27,7 @@ void check_precondition(const double a, const double b, const unsigned int N)
     if(a > b && "Checks if a is bigger than b"){
         throw std::invalid_argument("a > b! \n");
     }
-    if(N == 0 && "Checks if N is bigger than zero"){
+    if(N <= 0 && "Checks if N is bigger than zero"){
         throw std::invalid_argument("N == 0! \n");
     }
 }
@@ -42,6 +42,7 @@ void check_precondition(const double a, const double b, const unsigned int N)
  */
 double integrate_sine(const double a, const double b, const unsigned int N)
 {
+    check_precondition();
     return 0.0;
 }
 
@@ -56,6 +57,7 @@ double integrate_sine(const double a, const double b, const unsigned int N)
  */
 double integrate( double (*f)(const double), const double a, const double b, const unsigned int N)
 {
+    check_precondition();
     return 0.0;
 }
 
@@ -71,6 +73,7 @@ double integrate( double (*f)(const double), const double a, const double b, con
 template <typename Function>
 double integrate(Function &&f, const double a, const double b, const unsigned int N)
 {
+    check_precondition();
     return 0.0;
 }
 
@@ -85,6 +88,7 @@ double integrate(Function &&f, const double a, const double b, const unsigned in
  */
 double integrate( const Simpson::Function&, const double, const double, const unsigned int )
 {
+    check_precondition();
     return 0.0;
 }
 
