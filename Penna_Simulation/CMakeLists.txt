@@ -38,17 +38,9 @@ enable_testing()
 
 # set all tests
 set(tests
-    # tests for genome
-    genome_test_copy_constructor
-    genome_test_default_constructor
-    # tests for animal
-    animal_test_default_constructor
-    animal_test_copy_constructor
-    animal_test_basic_initialization
-    animal_test_advanced_initialization
-    # tests for population
-    population_test_default_constructor
-    population_test_functionality
+    test_genome
+    test_animal
+    test_population
 )
 
 # create test case for penna library

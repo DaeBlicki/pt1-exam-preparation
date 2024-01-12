@@ -9,6 +9,9 @@
  * VERSION 1.00 (C) Copyright Free to use
  * ===================================================================*/
 
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+
 #include "../include/simpson.hpp"
 #include <vector>
 #include <iomanip>
@@ -58,11 +61,12 @@ void TEST_SINE()
         }
         std::cout << line << "\n \n";
     }
-
 }
 
-int main()
-{
+TEST_CASE("Simpson Hard Code Sine Function!"){
     TEST_SINE();
-    return 0;
+}
+
+TEST_CASE("Dummy"){
+    
 }
