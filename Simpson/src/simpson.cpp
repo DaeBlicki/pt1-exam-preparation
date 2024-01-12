@@ -24,7 +24,12 @@ namespace Simpson{
  */
 void check_precondition(const double a, const double b, const unsigned int N)
 {
-
+    if(a > b && "Checks if a is bigger than b"){
+        throw std::invalid_argument("a > b! \n");
+    }
+    if(N == 0 && "Checks if N is bigger than zero"){
+        throw std::invalid_argument("N == 0! \n");
+    }
 }
 
 /*
