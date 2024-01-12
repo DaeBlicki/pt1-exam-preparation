@@ -1,8 +1,13 @@
-/* 
- * Programming Techniques for Scientific Simulations, HS 2023
- * Author: David Blickenstorfer
- * Date: 05/01/2024
- */
+/* ===================================================================
+ * Programming Techniques for Scientific Simulations I  
+ * package  :   Z2_group
+ * function :   describe the Z2 group of {Plus, Minus}
+ * created  :   05/01/2024
+ * author   :   DaeBlicki
+ * 
+ * updated  :   xx/xx/xx
+ * VERSION 1.00 (C) Copyright Free to use
+ * ===================================================================*/
 
 #include <complex>
 #include <iostream>

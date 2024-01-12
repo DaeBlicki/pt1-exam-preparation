@@ -1,3 +1,4 @@
 # Ignore older results
-*.png
-*.txt
+/mutation_per_animal.png
+/population_size.png
+/parameter.txt
