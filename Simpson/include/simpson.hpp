@@ -56,7 +56,7 @@ double integrate( double (*f)(const double), const double, const double, const u
  * POST: return integration of the function object in intervall (a, b) with N bins
  */
 template <typename Func>
-double integrate( const Func&& f, const double, const double, const unsigned int );
+double integrate( const Func&, const double, const double, const unsigned int );
 
 // Abstract base class version using inheritance and runtime polymorphism
 struct Function{

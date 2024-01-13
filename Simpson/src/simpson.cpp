@@ -92,7 +92,7 @@ double integrate( double (*f)(const double), const double a, const double b, con
  * POST: return integration of the function object in intervall (a, b) with N bins
  */
 template <typename Func>
-double integrate(const Func&& f, const double a, const double b, const unsigned int N)
+double integrate(const Func& f, const double a, const double b, const unsigned int N)
 {
     Simpson::check_precondition(a, b, N);
     const unsigned int steps = 2*N + 1;
