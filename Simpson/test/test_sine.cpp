@@ -17,8 +17,11 @@
 #include <iomanip>
 #include <iostream>
 
-void TEST_SINE()
-{
+/* ================================================
+ * TEST INTEGRATE SINE FUNCTION BY PRINTING RESULT
+ * ================================================*/
+
+TEST_CASE("Simpson Hard Code Sine Function!"){
     const unsigned int N = (1 << 10);  // maximal bins
     const std::vector<double> b_values({
         M_PI,           // pi
@@ -61,12 +64,5 @@ void TEST_SINE()
         }
         std::cout << line << "\n \n";
     }
-}
-
-TEST_CASE("Simpson Hard Code Sine Function!"){
-    TEST_SINE();
-}
-
-TEST_CASE("Dummy"){
-    
+    CHECK(true);
 }

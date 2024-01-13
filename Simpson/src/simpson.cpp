@@ -58,6 +58,7 @@ double integrate_sine(const double a, const double b, const unsigned int N)
     return sum;
 }
 
+
 /*
  * integrate() - use function pointer to integrate f(x) in interval (a, b) using simpson integration
  * PRECONDITIONS:   
@@ -70,11 +71,19 @@ double integrate_sine(const double a, const double b, const unsigned int N)
 double integrate( double (*f)(const double), const double a, const double b, const unsigned int N)
 {
     Simpson::check_precondition(a, b, N);
-    return 0.0;
+    const unsigned int steps = 2*N + 1;
+    const double dr = (b - a) / (steps - 1);
+    double I = f(a);
+
+    for(unsigned int i = 1; i < steps-1; ++i)
+        I += 2 * (1.0 + i%2) * f(a + dr * i);
+
+    I += f(b);
+    return I * (1./3) * dr;
 }
 
 /*
- * integrate() - use function objet to integrate f(x) in interval (a,b) using simpson integration
+ * integrate() - use function object to integrate f(x) in interval (a,b) using simpson integration
  * PRECONDITIONS:   
  * @ f : is a function object (example Lambda expression) with argument double x and return double f(x)
  * @ a : is start of the integration interval (a <= b)
@@ -82,11 +91,19 @@ double integrate( double (*f)(const double), const double a, const double b, con
  * @ N : numbers of bins to split interval into smaller intervals (N > 0)
  * POST: return integration of the function object in intervall (a, b) with N bins
  */
-template <typename Function>
-double integrate(Function &&f, const double a, const double b, const unsigned int N)
+template <typename Func>
+double integrate(const Func&& f, const double a, const double b, const unsigned int N)
 {
     Simpson::check_precondition(a, b, N);
-    return 0.0;
+    const unsigned int steps = 2*N + 1;
+    const double dr = (b - a) / (steps - 1);
+    double I = f(a);
+
+    for(unsigned int i = 1; i < steps-1; ++i)
+        I += 2 * (1.0 + i%2) * f(a + dr * i);
+
+    I += f(b);
+    return I * (1./3) * dr;
 }
 
 /*

@@ -9,6 +9,7 @@
 #define SIMPSON_H
 
 #include <stdexcept>
+#include <functional>
 #include <cmath>
 
 // namespace Simpson
@@ -46,7 +47,7 @@ double integrate_sine( const double, const double, const unsigned int );
 double integrate( double (*f)(const double), const double, const double, const unsigned int );
 
 /*
- * integrate() - use function objet to integrate f(x) in interval (a,b) using simpson integration
+ * integrate() - use function object to integrate f(x) in interval (a,b) using simpson integration
  * PRECONDITIONS:   
  * @ f : is a function object (example Lambda expression) with argument double x and return double f(x)
  * @ a : is start of the integration interval (a < b)
@@ -54,8 +55,8 @@ double integrate( double (*f)(const double), const double, const double, const u
  * @ N : numbers of bins to split interval into smaller intervals (N > 0)
  * POST: return integration of the function object in intervall (a, b) with N bins
  */
-template <typename Function>
-double integrate( Function &&f, const double, const double, const unsigned int );
+template <typename Func>
+double integrate( const Func&& f, const double, const double, const unsigned int );
 
 // Abstract base class version using inheritance and runtime polymorphism
 struct Function{
