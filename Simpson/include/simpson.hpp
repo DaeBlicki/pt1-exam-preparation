@@ -36,7 +36,21 @@ double integrate_sine( const double, const double, const unsigned int );
  * POST: return integration of the function object in intervall (a, b) with N bins
  */
 template <typename Function>
-double integrate( const Function&, const double, const double, const unsigned int );
+double integrate(const Function& f, const double a, const double b, const unsigned int N)
+{
+     if(N <= 0 && "Checks if N is bigger than zero"){
+        throw std::invalid_argument("N == 0! \n");
+    }
+    const unsigned int steps = 2*N + 1;
+    const double dr = (b - a) / (steps - 1);
+    double I = f(a);
+
+    for(unsigned int i = 1; i < steps-1; ++i)
+        I += 2 * (1.0 + i%2) * f(a + dr * i);
+
+    I += f(b);
+    return I * (1./3) * dr;
+}
 
 } // end namespace Simpson
 

@@ -9,7 +9,7 @@
  * VERSION 1.00 (C) Copyright Free to use
  * ===================================================================*/
 
-#include "polynomial.hpp"
+#include "../include/polynomial.hpp"
 
 /* ======================================================
  * IMPLEMENTATION OF INTEGRATION FUNCTION FOR POLYNOMIALS  
