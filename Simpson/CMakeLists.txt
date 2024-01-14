@@ -17,8 +17,9 @@ enable_testing()
 
 # name the test names
 set(tests
+    test_polynomial
     test_sine
-    test_integrate  
+    test_integrate
 )
 
 set(test_path ${CMAKE_CURRENT_SOURCE_DIR}/test/)
