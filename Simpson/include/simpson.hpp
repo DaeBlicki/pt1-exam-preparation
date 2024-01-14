@@ -28,7 +28,8 @@ double integrate_sine( const double, const double, const unsigned int );
 /*
  * integrate() - use function object to integrate f(x) in interval (a,b) using simpson integration
  * PRECONDITIONS:   
- * @ f : is a function object (example Lambda expression) with argument double x and return double f(x)
+ * @ f : is a function with operation double operator()(const double)
+ *     : can be Lambda function, Function class or Function Pointer
  * @ a : is start of the integration interval (a < b)
  * @ b : is end of the integration interval (b > a)
  * @ N : numbers of bins to split interval into smaller intervals (N > 0)
