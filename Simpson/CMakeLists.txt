@@ -20,13 +20,14 @@ set(tests
     test_polynomial
     test_sine
     test_integrate
+    test_benchmark
 )
 
 set(test_path ${CMAKE_CURRENT_SOURCE_DIR}/test/)
 
 # building tests
 foreach(test ${tests})
-    add_executable(${test} test/${test}.cpp src/polynomial.cpp)
+    add_executable(${test} test/${test}.cpp src/polynomial.cpp src/Timer.cpp)
     target_link_libraries(${test} Simpson)
     add_test(NAME ${test} COMMAND ${test})
 endforeach()
