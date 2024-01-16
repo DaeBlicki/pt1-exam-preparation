@@ -46,6 +46,7 @@ set(tests
     complex_test_constructor
     complex_test_logical
 
+    test_complex
     test_timer
     test_random
 )
