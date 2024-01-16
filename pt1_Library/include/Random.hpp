@@ -51,6 +51,13 @@ public:
      */
     static void seed( parameter_t );
 
+    /*
+     * coin() - return 0 or 1
+     * PRE: -
+     * POST: return 0 or 1 with 50% chance
+     */
+    static bool coin();
+
 };
 
 } // end namespace pt1

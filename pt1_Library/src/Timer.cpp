@@ -37,50 +37,49 @@ void Timer::start()
 {
     // throw exception if the Timer is measuring
     checkRunning();
-    measuring_ = true;    
-    starting_time_ = clock::now();
+    measuring_ = true;
     ending_time_ = starting_time_;
+    starting_time_ = clock::now();
 
 }
 
 void Timer::stop()
 {
     // throw exception if the Timer is not measuring
+    ending_time_ = clock::now();
     if(!measuring_){
         throw std::runtime_error("The timer is not measuring at the moment");
     }
-    ending_time_ = clock::now();
-    duration_t duration_time = ending_time_ - starting_time_;
     // update last measurement
-    last_measurement_ = duration_time;
+    duration_t duration_time = ending_time_ - starting_time_;
+    auto conversion = std::chrono::duration_cast<precision>(duration_time);
+    last_measurement_ = double(conversion.count())/ divisor_;
     // update the min time if necessary
-    if(duration_time < min_ || history_.empty()){
-        min_ = duration_time;
+    if(last_measurement_ < min_ || history_.empty()){
+        min_ = last_measurement_;
     }
        // update measurement history
-    history_.push_back(duration_time);
+    history_.push_back(last_measurement_);
     measuring_ = false;
 }
 
 void Timer::reset()
 {    
     checkRunning();
-    history_ = std::vector<duration_t>();
+    history_ = std::vector<double>();
 }
 
 double Timer::duration() const 
 {
     checkEmptyHistory();
     checkRunning();
-    precision duration = std::chrono::duration_cast<precision>(last_measurement_);
-    return double(duration.count())/ divisor_;
+    return last_measurement_;
 }
 
 double Timer::min() const{
     checkEmptyHistory();
     checkRunning();
-    precision min = std::chrono::duration_cast<precision>(min_);
-    return double(min.count())/ divisor_;
+    return min_;
 }
 
 double Timer::mean() const{
@@ -89,11 +88,10 @@ double Timer::mean() const{
     const size_t history_size = history_.size();
     double sum = 0.;
     for(size_t i = 0; i < history_size; i++){
-        precision current_time = std::chrono::duration_cast<precision>(history_.at(i));
-        sum += double(current_time.count());
+        sum += history_.at(i);
     }
     const double mean = sum / history_size;
-    return mean/ divisor_;
+    return mean;
 }
 
 } // end namespace pt1

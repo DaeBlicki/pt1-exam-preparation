@@ -43,4 +43,15 @@ void Random_Number_Generator::seed( parameter_t X){
     X_ = X;
 }
 
+bool Random_Number_Generator::coin(){
+    const bool heads = true;
+    const bool tails = false;
+    X_ = (a_ * X_ + c_) % m_;
+    unsigned int chances = X_ % 100;
+    if(chances < 50){
+        return heads;
+    }
+    return tails;
+}
+
 } // end namespace pt1

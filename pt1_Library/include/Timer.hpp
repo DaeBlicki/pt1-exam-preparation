@@ -28,9 +28,9 @@ private:
     clock::time_point starting_time_;   /* the time the timer start to measurement */
     clock::time_point ending_time_;     /* the time the timer end the LAST measurement */
     bool measuring_;                    /* true if the timer is measuring */
-    std::vector<duration_t> history_;   /* history of all measured time */
-    duration_t last_measurement_;       /* store the last measured time */
-    duration_t min_;                    /* store the minimal measured time */
+    std::vector<double> history_;       /* history of all measured time */
+    double last_measurement_;       /* store the last measured time */
+    double min_;                    /* store the minimal measured time */
 
     void checkEmptyHistory() const;           /* throw Exception when access min() or mean() without any measurements*/
     void checkRunning() const;                /* throw Exception when timer is measuring */

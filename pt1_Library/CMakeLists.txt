@@ -45,12 +45,9 @@ set(tests
     complex_test_assignment
     complex_test_constructor
     complex_test_logical
-    random_test_initialization
-    timer_test_data
-    timer_test_isMeasuring
-    timer_test_reset
-    timer_test_start_and_stop
-    timer_test_precision
+
+    test_timer
+    test_random
 )
 
 # build tests from test list and link with library
