@@ -5,7 +5,8 @@
  * created  :   18/12/2023
  * author   :   DaeBlicki
  * 
- * updated  :   xx/xx/xx
+ * updated  :   16/01/2024
+ * message  :   new coin toss function
  * VERSION 1.00 (C) Copyright Free to use
  * ===================================================================*/
 

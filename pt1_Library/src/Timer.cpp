@@ -5,7 +5,8 @@
  * created  :   18/12/2023
  * author   :   DaeBlicki
  * 
- * updated  :   xx/xx/xx
+ * updated  :   16/01/2024
+ * message  :   members are doubles instead of duration_t
  * VERSION 1.00 (C) Copyright Free to use
  * ===================================================================*/
 
@@ -13,6 +14,14 @@
 
 // nanmespace pt1 library
 namespace pt1{
+
+Timer::Timer()
+{
+    measuring_ = false;                    /* true if the timer is measuring */
+    history_ = std::vector<double>();       /* history of all measured time */
+    last_measurement_ = -1.;       /* store the last measured time */
+    min_ = -1.;                    /* store the minimal measured time */ 
+}
 
 void Timer::checkRunning() const
 {

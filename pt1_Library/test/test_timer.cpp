@@ -12,7 +12,6 @@
 #include "doctest.h"
 
 #include "../include/Timer.hpp"
-#include <unistd.h>
 
 /* ==========================
  *  TEST FOR START AND STOP
@@ -20,6 +19,7 @@
 
 TEST_SUITE("Start and Stop"){
     TEST_CASE("Stop after initialization"){
+        REQUIRE_NOTHROW(pt1::Timer T);
         pt1::Timer T;
         CHECK_THROWS(T.stop());
     }

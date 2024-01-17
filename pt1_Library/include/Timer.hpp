@@ -36,6 +36,8 @@ private:
     void checkRunning() const;                /* throw Exception when timer is measuring */
 
 public:
+    Timer();    /* default ctor */
+    ~Timer() = default;
 
     /*
      * isMeasuring() - return the measurement status
