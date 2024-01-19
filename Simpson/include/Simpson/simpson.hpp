@@ -26,7 +26,7 @@ namespace Simpson{
 double integrate_sine( const double, const double, const unsigned int );
 
 /*
- * integrate() - use function object to integrate f(x) in interval (a,b) using simpson integration
+ * integrate() - use function to integrate f(x) in interval (a,b) using simpson integration
  * PRECONDITIONS:   
  * @ f : is a function with operation double operator()(const double)
  *     : can be Lambda function, Function class or Function Pointer
@@ -51,6 +51,31 @@ double integrate(const Function& f, const double a, const double b, const unsign
     I += f(b);
     return I * (1./3) * dr;
 }
+
+
+/*
+ * integrate2d() - use function to integrate f(x,y) on a square (a,b)x(c,d)
+ * using simpson integration and Fubinis theorem
+ * PRECONDITIONS:   
+ * @ f : is a function with operation double operator()(const double, const double)
+ *     : can be Lambda function, Function class or Function Pointer
+ * @ a : is start of the integration interval for x axis
+ * @ b : is end of the integration interval for x axis
+ * @ c : is start of the integration interfal for y axis
+ * @ d : is end of teh integration interval for y axis
+ * @ N : numbers of bins to split interval into smaller intervals (N > 0)
+ * POST: return integration of the function object in intervall (a, b) with N bins
+ */
+template<typename Function>
+double integrate2d(const Function& f, 
+                const double a, const double b,
+                const double c, const double d, const unsigned int N)
+{
+
+    return 0.;
+}
+
+
 
 } // end namespace Simpson
 

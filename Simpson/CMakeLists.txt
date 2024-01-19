@@ -22,6 +22,7 @@ set(tests
     test_sine
     test_integrate
     test_benchmark
+    test_integrate2d
 )
 
 set(test_path ${CMAKE_CURRENT_SOURCE_DIR}/test/)
