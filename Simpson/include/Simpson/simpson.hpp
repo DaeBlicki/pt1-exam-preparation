@@ -71,8 +71,11 @@ double integrate2d(const Function& f,
                 const double a, const double b,
                 const double c, const double d, const unsigned int N)
 {
+    auto F = [&](const double x) -> double{
+        return integrate([&](const double y)->double{return f(x, y);}, a, b, N);
+    };
 
-    return 0.;
+    return integrate(F, a, b, N);
 }
 
 

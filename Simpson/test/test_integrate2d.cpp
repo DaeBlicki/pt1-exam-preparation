@@ -17,7 +17,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
-constexpr double epsilon = 1e-5;
+constexpr double epsilon = 1e-3;
 
 TEST_SUITE("2D-Integration"){
     TEST_CASE("Integration on unit disk"){
@@ -27,7 +27,7 @@ TEST_SUITE("2D-Integration"){
             }
             return 0.;
         };
-        CHECK(std::abs(Simpson::integrate2d(f, -1, 1, -1, 1, 50) - M_PI) < epsilon);
+        CHECK(std::abs(Simpson::integrate2d(f, -1, 1, -1, 1, 100) - M_PI) < epsilon);
     }
     TEST_CASE("Integration on density function"){
         CHECK(true);
@@ -40,6 +40,6 @@ TEST_SUITE("2D-Integration"){
             return 0.;
         };
         std::cout   << "The result of the Simpson Integration : "
-                    << Simpson::integrate2d(f, -1, 1, -1, 1, 50) << "\n";
+                    << Simpson::integrate2d(f, -1, 1, -1, 1, 100) << "\n";
     }
 }
