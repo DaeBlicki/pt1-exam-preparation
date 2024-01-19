@@ -11,7 +11,7 @@
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-#include "polynomial.hpp"
+#include "../include/Simpson/polynomial.hpp"
 
 constexpr double epsilon = 1e-12;
 

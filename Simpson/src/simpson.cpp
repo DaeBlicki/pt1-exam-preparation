@@ -9,7 +9,7 @@
  * VERSION 1.00 (C) Copyright Free to use
  * ===================================================================*/
 
-#include "../include/simpson.hpp"
+#include "../include/Simpson/simpson.hpp"
 
 // namespace Simpson
 namespace Simpson{

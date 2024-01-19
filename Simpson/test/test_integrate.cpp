@@ -9,8 +9,9 @@
  * VERSION 1.00 (C) Copyright Free to use
  * ===================================================================*/
 
-#include "../include/simpson.hpp"
-#include "../include/polynomial.hpp"
+#include "../include/Simpson/simpson.hpp"
+#include "../include/Simpson/polynomial.hpp"
+
 #include <iostream>
 
 

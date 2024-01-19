@@ -12,7 +12,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
-#include "../include/simpson.hpp"
+#include "../include/Simpson/simpson.hpp"
 #include <vector>
 #include <iomanip>
 #include <iostream>

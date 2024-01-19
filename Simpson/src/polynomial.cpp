@@ -9,7 +9,7 @@
  * VERSION 1.00 (C) Copyright Free to use
  * ===================================================================*/
 
-#include "../include/polynomial.hpp"
+#include "../include/Simpson/polynomial.hpp"
 
 /* ======================================================
  * IMPLEMENTATION OF INTEGRATION FUNCTION FOR POLYNOMIALS  
