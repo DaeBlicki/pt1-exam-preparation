@@ -34,7 +34,7 @@ private:
     pointer current_;   //< store the pointer to current element
 
     // myIterator private member functions
-    bool check_invariants();    //< check invariants
+    void check_invariants();    //< check invariants and throw exceptions
 
 public:
     // Constructors

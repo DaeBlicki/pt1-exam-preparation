@@ -10,11 +10,13 @@
  * ===================================================================*/
 
 #include "../include/myIterator.hpp"
+#include <stdexcept>
 
 // Class invariant checker
-bool MyIterator::check_invariants()
+void MyIterator::check_invariants()
 {
     //TODO::implementation
+    
 }
 
 
@@ -22,6 +24,9 @@ bool MyIterator::check_invariants()
 MyIterator::MyIterator() : first_(nullptr), last_(nullptr), current_(nullptr)
 {
     //TODO::implementation
+    if(check_invariants() == false){
+        throw std::logic_error("MyIterator Class invariant is violated! \n");
+    }
 }                            
 
 
