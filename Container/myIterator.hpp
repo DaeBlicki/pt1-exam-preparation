@@ -34,23 +34,24 @@ private:
      * check() - checks the class invariant of the current iterator
      * PRECONDITION:
      * @ initialized or empty: all nullptr
-     * @ first_ < end_ && first_ <= current_
+     * @ first_ <= current_ && current_ <= end_
      * POST: do nothing or throws exception if class invariant is violated
      */
     void check(bool Dereferenceable) const
     {
-        bool itChecksOut;
-        if (Dereferenceable) {  // must be dereferenceable
-            itChecksOut = (first_ <= current_) && (current_ <= last_);
-        } else {  // does not have to be dereferenceable
-            bool allNullPtr = (first_ == nullptr)     // catches case
-                            && (current_ == nullptr)     // of default ctored
-                            && (last_ == nullptr);     // iterator
-        itChecksOut =
-            allNullPtr || ((first_ <= current_) && (current_ <= last_));
-        }
-        if(!itChecksOut){
-            throw std::logic_error("MyIterator class invariants violated! \n");
+        bool all_null_ptr, ordered_ptr;
+        all_null_ptr =  (first_ == nullptr) && (last_ == nullptr) && (current_ == nullptr);
+        ordered_ptr = (first_ <= current_) && (current_ <= last_);
+        if(Dereferenceable && "The iterator must be dereferenceable!"){
+            if(ordered_ptr == false){
+                throw std::logic_error("Dereferenceable pointer have not ordered pointers! \n");
+            }
+        } 
+        if(!Dereferenceable && "The iterator must not be dereferenceable!"){
+            if(all_null_ptr || ordered_ptr){
+                return;
+            }
+            throw std::logic_error("Not deferenceable pointer have not all nullptr or ordered pointers! \n");
         }
     }
 
@@ -94,15 +95,7 @@ public:
     /* ===============================
      * myIterator Assignment Operator
      * ===============================*/
-    MyIterator& operator=(const MyIterator& rhs)
-    {
-        first_ = rhs.first_;
-        current_ = rhs.current_;
-        last_ = rhs.last_;
-        check(false);
-        return *this;
-    }
-
+    MyIterator& operator=(const MyIterator&) = default;
 
     /* ===============================
      * myIterator Logical Operators
@@ -111,15 +104,15 @@ public:
     // Equality Operator
     bool operator==(const MyIterator& rhs) const
     {
-    return (first_ == rhs.first_            // check that beginnings match
-            && current_ == rhs.current_     // check that current position match
-            && last_ == rhs.last_);         // check that endings match
+        return (current_ == rhs.current_)
+            && (last_ == rhs.last_)
+            && (first_ == rhs.first_);
     }
 
     // Inequality Operator
     bool operator!=(const MyIterator& rhs) const
     {
-        return !(*this == rhs);  // DRY: use of equality
+        return !(*this == rhs);
     }   
 
     /* ======================================
@@ -137,7 +130,7 @@ public:
     // postfix increment (DRY application)
     MyIterator operator++(int)
     {
-        MyIterator old = *this;
+        MyIterator old = this;
         ++(*this);
         return old;
     }
@@ -145,7 +138,7 @@ public:
     // prefix decrement
     MyIterator& operator--()
     {
-        check(false);
+        check(true);
         current_--;
         check(true);
         return *this;
