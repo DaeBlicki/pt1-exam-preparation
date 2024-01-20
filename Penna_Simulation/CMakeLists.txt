@@ -16,6 +16,17 @@ project("Penna Simulation" VERSION 2.0)
 set(CXX_STANDARD_REQUIRED on)
 set(CXX_STANDARD 20)
 
+# Compiler optimization
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+
+message(STATUS "Build Type: " ${CMAKE_BUILD_TYPE})
+
+set(CMAKE_CXX_FLAGS "-Wall -Wextra")
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+
 # Add matplotplusplus subdirectory
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib/matplotplusplus)
 

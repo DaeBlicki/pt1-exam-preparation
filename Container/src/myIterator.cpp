@@ -23,10 +23,7 @@ void MyIterator::check_invariants()
 // Default Constructor
 MyIterator::MyIterator() : first_(nullptr), last_(nullptr), current_(nullptr)
 {
-    //TODO::implementation
-    if(check_invariants() == false){
-        throw std::logic_error("MyIterator Class invariant is violated! \n");
-    }
+    check_invariants();
 }                            
 
 
