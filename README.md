@@ -17,6 +17,7 @@ Lecturer: Roger Kaeppeli
  - Function Pointer     : exercise 2
  - Function Template    : exercise 4/5
  - Virtual Function     : exercise 8
-5) Container: make own iterator and compare with standard library
-6) Wave Equation: Python and NumPy
+5) Iterators: make own iterator
+6) Containers: Compare standard library containers
+7) Wave Equation: Python and NumPy
 ## EXTRA: Penna Simulations
