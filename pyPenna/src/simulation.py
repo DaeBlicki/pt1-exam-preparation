@@ -17,11 +17,13 @@ from .genome import Genome
 class Simulation():
     """Represent main simulation class for pyPenna"""
 
-    def ___init___(self, years=0, mutation_rate=0, mutation_tolerance=5, 
+    def ___init___(self, mutation_rate=0, mutation_tolerance=5, 
                    start=0, capacity=0):
         """Create simulation object"""
         assert(capacity >= start)
         assert(mutation_rate >= 0 and mutation_rate <= 63)
+        assert(mutation_tolerance >= 0 and mutation_tolerance <= 63)
+        self.years = 0
         self.population = Population(self.population, start, capacity)
 
     def simulate(self):
