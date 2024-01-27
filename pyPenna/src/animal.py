@@ -1,7 +1,7 @@
 # ============================================================
 # Programming Techniques for Scientific Simulations I
 # package   : pyPenna
-# function  : represent the genome as bitstrings of {0, 1}
+# function  : represent animal class for pyPenna
 # created   : 27/01/24
 # author    : DaeBlicki
 #
