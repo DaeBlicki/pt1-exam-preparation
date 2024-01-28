@@ -18,6 +18,8 @@ class Population():
         """Initialize a population object"""
         self.population = np.empty()
         assert(capacity >= size)
+        self.size = size
+        self.capacity = capacity
         # initialize population list
         for i in range(size):
             np.insert(self.population, 0, Animal())
@@ -49,7 +51,8 @@ class Population():
         new_Generation = np.empty()
         for animal in self.population:
             # animal have to survive before enjoying life
-            if not animal.survive(self.getVelhust()):
+            environmental_factor = self.getVelhust()
+            if not animal.survive(environmental_factor):
                 np.delete(self.population, animal)
                 self.size -= 1
             else:

@@ -9,7 +9,8 @@
 # ============================================================
 
 import numpy as np
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
+
 from .population import Population
 from .animal import Animal
 from .genome import Genome
@@ -26,10 +27,22 @@ class Simulation():
         self.years = 0
         self.population = Population(self.population, start, capacity)
 
+    def init(self, mutation_rate, mutation_tolerance, start, capacity):
+        """init simulation object"""
+        assert(capacity >= start)
+        assert(mutation_rate >= 0 and mutation_rate <= 63)
+        assert(mutation_tolerance >= 0 and mutation_tolerance <= 63)
+        self.mutation_rate = mutation_rate
+        self.mutation_tolerance = mutation_tolerance
+        self.start = start
+        self.capacity = capacity
+
     def simulate(self):
         # initialize animal and genome class
-        Genome.__class__.mutation_rate = self.mututation_rate
-        Animal.__class__.mutation_tolerance = self.mutation_tolerance
+        initGenome = Genome()
+        initGenome.mutation_rate = self.mutation_rate
+        initAnimal = Animal()
+        initAnimal.mutation_tolerance(self.mutation_tolerance)
         # create matplotlib arrays
         time = np.empty()
         individuals = np.empty()

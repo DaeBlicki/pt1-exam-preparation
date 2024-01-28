@@ -10,6 +10,7 @@
 
 import numpy as numpy
 import random
+
 from .genome import Genome
 
 class Animal():
@@ -24,6 +25,34 @@ class Animal():
         self.gen = Genome(genome)
         self.age = age
         self.pregnant = pregnant
+
+    def maximalAge(self):
+        """Getter for maximal age"""
+        return self.__class__.maximal_age
+
+    def mutationTolerance(self):
+        """"Getter for mutation tolerance"""
+        return self.__class__.mutation_tolerance
+
+    def reproductionAge(self):
+        """"Getter for reproduction age"""
+        return self.__class__.reproduction_age
+
+    def pregnancyChance(self):
+        """"Getter for chance to get pregnant"""
+        return self.__class__.chance_to_get_pregnant
+    
+    def mutationTolerance(self, newTolerance):
+        """"Setter for mutation tolerance"""
+        self.__class__.mutation_tolerance = newTolerance
+
+    def reproductionAge(self, newAge):
+        """"Setter for reproduction age"""
+        self.__class__.reproduction_age = newAge
+
+    def pregnancyChance(self, chance):
+        """"Setter for chance to get pregnant"""
+        self.__class__.chance_to_get_pregnant = chance
 
     def init(self, mutation_tolerance, reproduction_age, 
              chance_to_get_pregnant):

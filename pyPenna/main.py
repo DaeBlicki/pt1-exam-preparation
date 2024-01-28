@@ -10,20 +10,33 @@
 
 import numpy as np
 import matplotlib.pyplot as plt 
+import random
+
 from src import Genome, Animal, Population, Simulation
 
+def test_method():
+    """"test method for pyPenna"""
+    Simulator = Simulation()
+    Simulator.simulate()
+
 def main():
+    test_method()
     # enter initializing members for pyPenna classes
-    seed = input("Enter seed for python random number generator!")
+    seed = input("Enter seed for python random number generator! ")
     seed = int(seed)
-    mutation_rate = input("Enter mutation rate for genome")
+    random.seed(seed)
+    mutation_rate = input("Enter mutation rate for genome! ")
     mutation_rate = int(mutation_rate)
-    mutation_tolerance = input("Enter mutation tolerance for animals")
+    mutation_tolerance = input("Enter mutation tolerance for animals! ")
     mutation_tolerance = int(mutation_tolerance)
-    start = input("Enter starting size of population")
+    start = input("Enter starting size of population! ")
     start = int(start)
-    capacity = input("Enter capacity of the population")
+    capacity = input("Enter capacity of the population! ")
     capacity = int(capacity)
     # simulate pyPenna
-    Simulator = Simulation(mutation_rate, mutation_tolerance, start, capacity)
+    Simulator = Simulation()
+    Simulator.init(mutation_rate, mutation_tolerance, start, capacity)
     Simulator.simulate()
+
+if __name__ == "__main__":
+    main()

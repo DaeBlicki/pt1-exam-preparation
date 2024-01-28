@@ -19,11 +19,24 @@ class Genome():
 
     def __init__(self, genome=None):
         """Initialize genome object."""
+        values = [0, 1]
         if genome is None:
-            # genes: contains information at which age 
-            self.genes = np.zeros(self.__class__.gene_size, dtype=bool)
+            # genes: contains information for mutation at which age 
+            self.genes = np.random.choice([0, 1], size=self.__class__.genome_size)
         else:
-            self.genes = genome.genes
+            self.genes = np.copy(genome.genes)
+
+    def genome_size(self):
+        """getter for genome size"""
+        return self.__class__.genome_size
+    
+    def mutationRate(self):
+        """getter for mutation rate"""
+        return self.__class__.mutation_rate
+    
+    def mutationRate(self, newRate):
+        """setter for mutation rate"""
+        self.__class__.mutation_rate = newRate
     
     def mutate(self):
         """Genes will randomely flip good and bad genes depend on mutation rate.
