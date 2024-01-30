@@ -1,6 +1,6 @@
 /* ==============================================================
  * Programming Techniques for Scientific Simulations I  
- * Header file defining complex numbers
+ * Header file defining template container functions
  * 
  * VERSION 1.00 (C) Copyright Free to use
  * ==============================================================*/
