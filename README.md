@@ -19,5 +19,5 @@ Lecturer: Roger Kaeppeli
  - Virtual Function     : exercise 8
 5) Iterators: make own iterator
 6) Containers: Compare standard library containers
-7) Wave Equation: Python and NumPy
+7) Lotka-Volterra ODE: Python and NumPy
 ## EXTRA: Penna Simulations
